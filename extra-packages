@@ -1,5 +1,12 @@
-chezmoi
+# Alpine packages
+## shell
+zsh
+starship
+## python
 python3
 py3-pip
-starship
-zsh
+## others
+chezmoi
+cosign
+cosign-bash-completion
+cosign-zsh-completion
