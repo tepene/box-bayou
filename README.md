@@ -2,9 +2,9 @@
 
 This is my take on a Toolbox / Distrobox container based on the ideas of [boxkit](https://github.com/ublue-os/boxkit).
 
-The main idea behind this project is to have a companion distrobox container for
+The goal of this project is to have a companion distrobox container for
 my custom [ublue-bayou](https://github.com/tepene/ublue-bayou) Fedora Silverblue
-setup. Itŝ my default terminal for daily usage.
+setup. It's my default terminal for daily usage.
 
 ## Tools
 
