@@ -32,8 +32,6 @@ The following tools are symlinked from the host system:
 
 ## How to use
 
-### Create Box
-
 If you use distrobox:
 
 ```sh
