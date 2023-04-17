@@ -40,5 +40,4 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/bin/btop
 
 # clean up and finalize container build
-RUN   chmod 777 -R /opt && \
-      rm -rf /tmp/*
+RUN   rm -rf /tmp/*
