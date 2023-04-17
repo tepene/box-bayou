@@ -16,7 +16,7 @@ and and is spruced up with the following configuration.
 The following tools are shipped with the container:
 
 - [chezmoi](https://www.chezmoi.io/) for dotfile management
-- [pipx](https://pypa.github.io/pipx/) to run Python applications in isolated environments
+- [pipx](https://pypa.github.io/pipx/) to run python applications in isolated environments
 - [Poetry](https://python-poetry.org/) for python `venv` management
 - [python-3](https://www.python.org/) to run python applications
 - [starship](https://starship.rs/) cross-shell prompt for that <3
