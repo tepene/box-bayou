@@ -1,0 +1,79 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Git: Fetch upstream",
+      "type": "shell",
+      "command": "git fetch upstream",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Git: Merge from upstream",
+      "type": "shell",
+      "command": "git merge --no-ff --no-commit upstream/main",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Git: Delete merged branches",
+      "type": "shell",
+      "command": "git delete-merged-branches",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Git: Prune remote",
+      "type": "shell",
+      "command": "git remote prune origin",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Podman: Create container registry",
+      "type": "shell",
+      "command": "podman run -d --name registry.dev.local -p 5000:5000 docker.io/library/registry:latest",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Podman: Start container registry",
+      "type": "shell",
+      "command": "podman start registry.dev.local",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Podman: Stop container registry",
+      "type": "shell",
+      "command": "podman stop registry.dev.local",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Podman: Build Test Image",
+      "type": "shell",
+      "command": "podman build . -t registry.dev.local:5000/box-bayou:dev-latest",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Podman: Upload Test Image",
+      "type": "shell",
+      "command": "podman push --tls-verify=false registry.dev.local:5000/box-bayou:dev-latest",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}
