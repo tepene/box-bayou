@@ -1,6 +1,6 @@
 # box-bayou
 
-This is my take on a Toolbox / Distrobox container based on the ideas of [boxkit](https://github.com/ublue-os/boxkit).
+This is my take on a Toolbox / Distrobox container based on the ideas of [ublue-box](https://github.com/tepene/ublue-box).
 
 The goal of this project is to have a companion distrobox container for
 my custom [ublue-bayou](https://github.com/tepene/ublue-bayou) Fedora Silverblue
@@ -37,15 +37,15 @@ The following tools are symlinked from the host system:
 If you use distrobox:
 
 ```sh
-distrobox create -i ghcr.io/ublue-os/boxkit -n boxkit
-distrobox enter boxkit
+distrobox create -i ghcr.io/tepene/ublue-box -n ublue-box
+distrobox enter ublue-box
 ```
 
 If you use toolbox:
 
 ```sh
-toolbox create -i ghcr.io/ublue-os/boxkit -c boxkit
-toolbox enter boxkit
+toolbox create -i ghcr.io/tepene/ublue-box -c ublue-box
+toolbox enter ublue-box
 ```
 
 ## Verification
