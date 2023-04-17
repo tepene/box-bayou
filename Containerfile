@@ -26,6 +26,11 @@ ENV POETRY_DATA_DIR="/opt/pypoetry"
 ENV POETRY_CACHE_DIR="/opt/pypoetry"
 RUN   pipx install poetry
 
+# install oh-my-zsh
+ENV ZSH="/opt/oh-my-zsh"
+RUN   sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+COPY  opt/oh-my-zsh /opt/oh-my-zsh
+
 # add symlinks from host system
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 

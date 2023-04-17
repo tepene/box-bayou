@@ -1,6 +1,7 @@
 # Alpine packages
 ## shell
 zsh
+zsh-autosuggestions
 starship
 ## python
 python3
