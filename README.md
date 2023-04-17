@@ -37,14 +37,14 @@ The following tools are symlinked from the host system:
 If you use distrobox:
 
 ```sh
-distrobox create -i ghcr.io/tepene/bayou-box:latest -n bayou-box
+distrobox create -i ghcr.io/tepene/box-bayou:latest -n box-bayou
 distrobox enter ublue-box
 ```
 
 If you use toolbox:
 
 ```sh
-toolbox create -i ghcr.io/tepene/bayou-box:latest -c bayou-box
+toolbox create -i ghcr.io/tepene/box-bayou:latest -c box-bayou
 toolbox enter ublue-box
 ```
 
@@ -54,7 +54,7 @@ These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosi
 You can verify the signature by downloading the `cosign.pub` key from this repo
 and running the following command:
 
-`cosign verify --key cosign.pub ghcr.io/tepene/bayou-box:latest`
+`cosign verify --key cosign.pub ghcr.io/tepene/box-bayou:latest`
 
 If you're forking this repo you should [read the docs](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 on keeping secrets in github. You need to [generate a new keypair](https://docs.sigstore.dev/cosign/overview/)
