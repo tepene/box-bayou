@@ -1,6 +1,6 @@
 # box-bayou
 
-This is my take on a Toolbox / Distrobox container based on the ideas of [ublue-box](https://github.com/tepene/ublue-box).
+This is my take on a Toolbox / Distrobox container based on the ideas of [ublue-os/boxkit](https://github.com/ublue-os/boxkit).
 
 The goal of this project is to have a companion distrobox container for
 my custom [ublue-bayou](https://github.com/tepene/ublue-bayou) Fedora Silverblue
