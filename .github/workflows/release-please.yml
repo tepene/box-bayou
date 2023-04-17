@@ -2,12 +2,25 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
 name: release-please
+
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      releases_created: ${{ steps.release-please.outputs.releases_created }}
+      tag: ${{ steps.release-please.outputs.tag_name }}
+      upload_url: ${{ steps.release-please.outputs.upload_url }}
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
-          release-type: node
+          release-type: simple
           package-name: release-please-action
+          prerelease: true
+          bump-minor-pre-major: true
+          bootstrap-sha: 1b5eef7b6102b57d1bbf231b6b845e0e748bc975
