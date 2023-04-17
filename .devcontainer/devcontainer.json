@@ -62,6 +62,7 @@
         "DavidAnson.vscode-markdownlint",
         "esbenp.prettier-vscode",
         "GitHub.vscode-pull-request-github",
+        "Gruntfuggly.todo-tree",
         "kokakiwi.vscode-just",
         "ms-azuretools.vscode-docker",
         "nico-castell.linux-desktop-file",
