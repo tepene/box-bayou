@@ -12,6 +12,7 @@ dotfiles
 flatpak
 keypair
 ostree
+PIPX
 sigstore
 Silverblue
 sisgstore's
