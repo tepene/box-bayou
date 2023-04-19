@@ -1,7 +1,6 @@
 # Alpine packages
 ## shell
 zsh
-zsh-autosuggestions
 starship
 ## python
 python3
@@ -9,5 +8,4 @@ py3-pip
 ## others
 chezmoi
 cosign
-cosign-bash-completion
-cosign-zsh-completion
+neofetch
