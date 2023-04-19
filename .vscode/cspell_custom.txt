@@ -3,16 +3,21 @@ boxkit
 btop
 Buildah
 chezmoi
+chsh
+containerenv
 Containerfile
 containerfiles
 devcontainer
+direnv
 Distrobox
 dotfile
 dotfiles
 flatpak
 keypair
+neofetch
 ostree
 PIPX
+robbyrussell
 sigstore
 Silverblue
 sisgstore's
@@ -20,3 +25,4 @@ tepene
 Toolbx
 ublue
 venv
+zstyle

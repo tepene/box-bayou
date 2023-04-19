@@ -18,7 +18,7 @@ ENV PIPX_BIN_DIR="/opt/pipx/bin"
 ENV PIPX_DEFAULT_PYTHON="/usr/bin/python"
 ENV PATH "$PATH:$PIPX_BIN_DIR"
 RUN   python3 -m pip install pipx && \
-      python3 -m pipx ensurepath
+      python3 -m pipx ensurepath    
 
 # install poetry
 ENV POETRY_CONFIG_DIR="/opt/pypoetry"
@@ -26,7 +26,14 @@ ENV POETRY_DATA_DIR="/opt/pypoetry"
 ENV POETRY_CACHE_DIR="/opt/pypoetry"
 RUN   pipx install poetry
 
-# add symlinks from host system
+# install oh-my-zsh and plugins
+ENV ZSH="/opt/oh-my-zsh"
+RUN   sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUN   git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH/custom/plugins/zsh-autosuggestions"
+RUN   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH/custom/plugins/zsh-syntax-highlighting"
+COPY  opt/oh-my-zsh /opt/oh-my-zsh
+
+# add symlinks for tools installed host system
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/podman && \
@@ -34,6 +41,9 @@ RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/bin/just && \
       ln -fs /usr/bin/distrobox-host-exec /usr/bin/btop
 
+# add scripts
+COPY  opt/scripts /opt/scripts
+RUN   chmod +x /opt/scripts/*.sh
+
 # clean up and finalize container build
-RUN   chmod 777 -R /opt && \
-      rm -rf /tmp/*
+RUN   rm -rf /tmp/*

@@ -1,5 +1,15 @@
-chezmoi
+# Alpine packages
+## shell
+zsh
+starship
+## python
 python3
 py3-pip
-starship
-zsh
+direnv
+## others
+chezmoi
+cosign
+helix
+jq
+neofetch
+yq
