@@ -1,7 +1,8 @@
 # zsh configuration - https://github.com/tepene/box-bayou
 
-# Path to oh-my-zsh installation
+# Global variables
 export ZSH="/opt/oh-my-zsh"
+export SHELL="/bin/zsh"
 
 # theme
 ZSH_THEME="robbyrussell"
