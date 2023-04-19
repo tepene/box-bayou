@@ -17,6 +17,7 @@ plugins=(
     zsh-autosuggestions
 )
 
+# load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
