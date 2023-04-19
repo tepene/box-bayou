@@ -59,6 +59,7 @@
         "peacock.surpriseMeOnStartup": false
       },
       "extensions": [
+        "bungcip.better-toml",
         "DavidAnson.vscode-markdownlint",
         "esbenp.prettier-vscode",
         "GitHub.vscode-pull-request-github",

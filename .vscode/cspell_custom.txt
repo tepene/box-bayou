@@ -1,4 +1,5 @@
 artifacthub
+blackbox
 boxkit
 btop
 Buildah

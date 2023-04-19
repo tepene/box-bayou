@@ -28,11 +28,12 @@ style = "italic fg:8"
 [directory]
 truncation_length = 5
 truncate_to_repo = false
-truncation_symbol = '.../'
+truncation_symbol = ".../"
 
 [python]
 symbol = "󰌠 "
 
 [cmd_duration]
 min_time = 500
-format = '[$duration](bold yellow)'
+format = "󱫫 [$duration]($style)"
+style = "italic fg:10"
