@@ -39,11 +39,21 @@ function starship() {
 }
 
 # main
-case "\$1" in
-    glitter)   permission; shell; zsh; starship ;;
-    boring) permission; shell ;;
-    keep-my-config) permission ;;
-    *) echo "usage: \$0 glitter|boring|keep-my-config" >&2
-        exit 1
+case "$1" in
+    glitter)
+        permission
+        shell
+        zsh
+        starship
+    ;;
+    boring)
+        permission
+        shell
+    ;;
+    preserve)
+        permission
+    ;;
+    *)
+        echo "Invalid argument: please provide 'glitter', 'boring', or 'preserve'"
     ;;
 esac
