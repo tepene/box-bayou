@@ -16,6 +16,7 @@ dotfiles
 flatpak
 keypair
 neofetch
+nmap
 ostree
 PIPX
 robbyrussell
