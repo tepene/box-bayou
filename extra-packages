@@ -6,6 +6,9 @@ starship
 python3
 py3-pip
 direnv
+## network tools
+nmap
+bind-tools
 ## others
 chezmoi
 cosign
