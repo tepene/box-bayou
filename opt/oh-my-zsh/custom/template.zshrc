@@ -3,6 +3,7 @@
 # Global variables
 export ZSH="/opt/oh-my-zsh"
 export SHELL="/bin/zsh"
+export EDITOR="/usr/bin/hx"
 
 # theme
 ZSH_THEME="robbyrussell"
