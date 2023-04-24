@@ -33,6 +33,11 @@ RUN   git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH/custom/pl
 RUN   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH/custom/plugins/zsh-syntax-highlighting"
 COPY  opt/oh-my-zsh /opt/oh-my-zsh
 
+# fixing and updating helix syntax highlighting
+ENV RUSTFLAGS="-C target-feature=-crt-static"
+RUN   hx -g fetch && \
+      hx -g build
+
 # add symlinks for tools installed host system
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 
