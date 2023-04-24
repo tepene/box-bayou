@@ -6,11 +6,10 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="stephan.luescher@mykolab.com"
 
 # install alpine packages
-COPY  extra-packages /
-RUN   apk update && \
-      apk upgrade && \
-      grep -v '^#' /extra-packages | xargs apk add
-RUN   rm /extra-packages
+COPY  extra-packages /tmp/extra-packages
+RUN   apk update --no-cache && \
+      apk upgrade --no-cache && \
+      grep -v '^#' /tmp/extra-packages | xargs apk add --no-cache
 
 # install pipx
 ENV PIPX_HOME="/opt/pipx"
@@ -28,9 +27,9 @@ RUN   pipx install poetry
 
 # install oh-my-zsh and plugins
 ENV ZSH="/opt/oh-my-zsh"
-RUN   sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-RUN   git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH/custom/plugins/zsh-autosuggestions"
-RUN   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH/custom/plugins/zsh-syntax-highlighting"
+RUN   sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
+      git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH/custom/plugins/zsh-autosuggestions" && \
+      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH/custom/plugins/zsh-syntax-highlighting"
 COPY  opt/oh-my-zsh /opt/oh-my-zsh
 
 # fixing and updating helix syntax highlighting
@@ -51,4 +50,5 @@ COPY  opt/scripts /opt/scripts
 RUN   chmod +x /opt/scripts/*.sh
 
 # clean up and finalize container build
-RUN   rm -rf /tmp/*
+RUN   rm -rf /tmp/* && \
+      rm -rf /var/cache/apk/*
