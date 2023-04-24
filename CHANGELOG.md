@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/tepene/box-bayou/compare/v1.1.0...v1.1.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* make build footprint somewhat smaller ([#24](https://github.com/tepene/box-bayou/issues/24)) ([fb109b0](https://github.com/tepene/box-bayou/commit/fb109b03ed1f012dc82eb0ba4a903210f84a414a))
+
 ## [1.1.0](https://github.com/tepene/box-bayou/compare/v1.0.0...v1.1.0) (2023-04-24)
 
 
