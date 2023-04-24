@@ -8,6 +8,7 @@ py3-pip
 direnv
 ## network tools
 nmap
+nmap-scripts
 bind-tools
 ## others
 chezmoi
