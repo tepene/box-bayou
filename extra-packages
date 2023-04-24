@@ -1,4 +1,6 @@
 # Alpine packages
+## compile
+build-base
 ## shell
 zsh
 starship
@@ -10,10 +12,11 @@ direnv
 nmap
 nmap-scripts
 bind-tools
-## others
+## others utils
 chezmoi
 cosign
 helix
+tree-sitter-grammars
 jq
 neofetch
 yq
