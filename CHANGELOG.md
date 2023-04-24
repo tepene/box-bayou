@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/tepene/box-bayou/compare/v1.0.0...v1.1.0) (2023-04-24)
+
+
+### Features
+
+* add network-tools ([#20](https://github.com/tepene/box-bayou/issues/20)) ([df5ff4f](https://github.com/tepene/box-bayou/commit/df5ff4f59bfa53de945ac7ffaa1fa1163e62c88d))
+* add syntax highlighting for helix ([#22](https://github.com/tepene/box-bayou/issues/22)) ([3795e25](https://github.com/tepene/box-bayou/commit/3795e25b1e8c97b049950875065eff5d909fcae7))
+
+
+### Bug Fixes
+
+* make helix standard editor ([#19](https://github.com/tepene/box-bayou/issues/19)) ([00abbd1](https://github.com/tepene/box-bayou/commit/00abbd1299ad17985063ab363a2b25d31f6f14d6))
+* missing nmap script ([#20](https://github.com/tepene/box-bayou/issues/20)) ([d184c16](https://github.com/tepene/box-bayou/commit/d184c16206084782d017036909a331a4947899bf))
+
 ## 1.0.0 (2023-04-19)
 
 
